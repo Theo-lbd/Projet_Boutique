@@ -1,0 +1,105 @@
+:root{
+    /* SIZE */
+    --font-size-title: 24px;
+    --font-size-text: 16px;
+    --font-size-big-icon:26px;
+    --font-size-icon: 20px;
+    /* COLOR */
+    --font-color-border:#ABA4A4;
+    --font-color-white:#fff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+html{
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--font-color-white);
+}
+
+a:visited{
+    color: #fff;
+}
+/* ========== HEADER ========== */
+header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--font-color-border);
+}
+
+header section div img{
+    width: 40%;
+}
+
+header section .cart-toggle{
+    font-size: var(--font-size-icon);
+}
+
+/* ========== Main ========== */
+
+/* ==== Head Main ==== */
+
+.head_main{
+    background-image: url(../img/furniture-998265_1280.jpg);
+    padding: 1.5rem;
+    text-align: center;
+    height: 50vh;
+}
+
+.head_main div{
+    margin-top: 48%;
+    color: var(--font-color-white);
+}
+.head_main div a i{
+    font-size: var(--font-size-big-icon);
+}
+
+/* ==== NAV ==== */
+
+.section_nav{
+    padding: 1rem 0.5rem;
+    text-align: center;
+    border-bottom: 1px solid var(--font-color-border);
+}
+
+.section_nav .button_nav:not(:last-child){
+    margin-right: 1rem;
+}
+.section_nav .button_nav{
+    padding: 0.3rem;
+}
+
+/* ==== CONTAINER ==== */
+.container{
+    padding: 2rem;
+}
+
+/* ==== CARD PRODUCT ==== */
+
+.productsContainer{
+    margin: auto;
+    width: 90%;
+}
+
+.productsContainer .product{
+    margin-bottom: 2rem;
+    border: 1px solid var(--font-color-border);
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+.img_product{
+    width: 100%;
+    margin: 4rem 0;
+    
+}
+
