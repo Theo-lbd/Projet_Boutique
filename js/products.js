@@ -24,7 +24,7 @@ export const products = {
         },
         {
             _id: "3",
-            name: "Tv Hisense oled",
+            name: "Tv Hisense 2",
             price: 400,
             imageUrl: "../img/Tv_hisense.webp",
             altTxt: "Photo d'une TV Hisense"

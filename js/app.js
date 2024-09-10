@@ -1,7 +1,13 @@
 import { products } from './products.js';
 
+document.getElementById('categorieToggle').addEventListener('click', function() {
+    const menuList = document.getElementById('categorieList');
+    menuList.classList.toggle('show');
+});
+
 // Sélectionne le conteneur des produits
 const productsContainer = document.getElementById('productsContainer');
+const categoryTitle = document.getElementById('categoryTitle');
 
 // Fonction pour afficher les produits d'une catégorie spécifique
 function displayProducts(category) {
@@ -12,6 +18,8 @@ function displayProducts(category) {
         productsContainer.innerHTML = '<p>Aucun produit trouvé pour cette catégorie.</p>';
         return;
     }
+
+    categoryTitle.textContent = category.charAt(0).toUpperCase() + category.slice(1);
 
     // Boucle parcour produit
     products[category].forEach(product => {
@@ -36,6 +44,10 @@ function addToCart(productId) {
     alert(`Le produit avec l'ID ${productId} a été ajouté au panier.`);
 }
 
+
+
 displayProducts('tv');
 window.displayProducts = displayProducts;
+
+
 

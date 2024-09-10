@@ -26,27 +26,32 @@
     <main>
         <section class="head_main">
             <div>
-                <h1>
+                <h2>
                     Créative Intérior
-                </h1>
+                </h2>
             </div>
-            <div>
-                <a href="#">
+            <div class="head_main_icon_down">
+                <a href="#container">
                     <i class="fa-solid fa-chevron-down"></i>
                 </a>
             </div>
         </section>
 
-        <section class="section_nav">
-            <nav>
-                <button class="button_nav" onclick="displayProducts('tv')">TV</button>
-                <button class="button_nav" onclick="displayProducts('Table_basse')">Table basse</button>
-                <button class="button_nav" onclick="displayProducts('Table')">Table</button>
-                <button class="button_nav" onclick="displayProducts('Chaise')">Chaise</button>
-                <button class="button_nav" onclick="displayProducts('Cuisine')">Cuisine</button>
+        <section class="categorie-container" id="container">
+            <button class="categorie-button" id="categorieToggle">
+                Catégorie 
+                <i class="fa-solid fa-chevron-down chevron_categorie"></i>
+            </button>
+            <nav class="categorie-list" id="categorieList">
+                <button class="categorie-button" onclick="displayProducts('tv')">TV</button>
+                <button class="categorie-button" onclick="displayProducts('Table_basse')">Table basse</button>
+                <button class="categorie-button" onclick="displayProducts('Table')">Table</button>
+                <button class="categorie-button" onclick="displayProducts('Chaise')">Chaise</button>
+                <button class="categorie-button" onclick="displayProducts('Cuisine')">Cuisine</button>
             </nav>
         </section>
         <section class="container">
+            <h1 id="categoryTitle" class="categoryTitle"></h1>
             <section>
                 <div id="productsContainer" class="productsContainer"></div>
             </section>

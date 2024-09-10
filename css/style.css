@@ -7,6 +7,9 @@
     /* COLOR */
     --font-color-border:#ABA4A4;
     --font-color-white:#fff;
+    --font-color-black:#000;
+    --font-color-grey:#c2bfbf93;
+    --font-color-shadow:#c2bfbf51;
 }
 
 *{
@@ -17,6 +20,7 @@
 }
 html{
     width: 100%;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -49,38 +53,68 @@ header section .cart-toggle{
 /* ==== Head Main ==== */
 
 .head_main{
-    background-image: url(../img/furniture-998265_1280.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    url('../img/furniture-998265_1280.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 1.5rem;
     text-align: center;
     height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
 
+
 .head_main div{
-    margin-top: 48%;
     color: var(--font-color-white);
 }
 .head_main div a i{
     font-size: var(--font-size-big-icon);
 }
 
-/* ==== NAV ==== */
-
-.section_nav{
-    padding: 1rem 0.5rem;
-    text-align: center;
-    border-bottom: 1px solid var(--font-color-border);
+.head_main_icon_down{
+    margin-top: 10rem;
 }
 
-.section_nav .button_nav:not(:last-child){
-    margin-right: 1rem;
+/* ==== Dropdown ==== */
+
+button#categorieToggle, button.categorie-button{
+    background-color: var(--font-color-white);
+    border-bottom: 1px solid #53525227;
 }
-.section_nav .button_nav{
-    padding: 0.3rem;
+
+.categorie-button {
+    display: flex;
+    justify-content: space-between;
+    color: var(--font-color-black);
+    border: none;
+    padding: 1rem;
+    font-size: var(--font-size-text);
+    width: 100%;
+    text-align: left;
 }
+
+.categorie-list {
+    background-color: var(--font-color-white);
+    display: none;
+    position: absolute;
+    width: 100%;
+}
+
+.categorie-list.show {
+    display: block;
+}
+
 
 /* ==== CONTAINER ==== */
 .container{
     padding: 2rem;
+}
+
+.categoryTitle{
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 /* ==== CARD PRODUCT ==== */
@@ -103,3 +137,65 @@ header section .cart-toggle{
     
 }
 
+.price_product{
+    padding: 1rem 0;
+}
+
+button.addToCart{
+    padding: 0.5rem;
+    background-color: var(--font-color-white);
+    border: 1px solid var(--font-color-border);
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px var(--font-color-shadow);
+}
+
+button.addToCart:hover{
+    background-color: var(--font-color-grey);
+}
+
+
+/* ==== RESPONSIVE ==== */
+
+@media (min-width: 720px) {
+    /* ==== product ==== */
+    .productsContainer{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .product{
+        width: 30%;
+    }
+
+    /* ==== NAV ==== */
+
+    .categorie-list {
+        display: block;
+    }
+
+    button#categorieToggle{
+        display: none;
+    }
+
+    .categorie-list{
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    button.categorie-button{
+        margin-right: 0;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .product{
+        width: 20%;
+    }    
+
+}
