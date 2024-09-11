@@ -10,6 +10,8 @@
     --font-color-black:#000;
     --font-color-grey:#c2bfbf93;
     --font-color-shadow:#c2bfbf51;
+    --font-color-transparent:#ffffff00;
+    --font-color-red:#ff0000;
 }
 
 *{
@@ -47,6 +49,102 @@ header section div img{
 header section .cart-toggle{
     font-size: var(--font-size-icon);
 }
+
+/* ==== Side menu ==== */
+
+.cart-toggle {
+    top: 20px;
+    right: 20px;
+}
+
+.cart-toggle i {
+    font-size: 24px;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: -305px;
+    width: 300px;
+    height: 100%;
+    background-color: var(--font-color-white);
+    box-shadow: -2px 0 5px var(--font-color-shadow);
+    transition: right 0.3s ease;
+    z-index: 999;
+    padding: 2rem;
+}
+
+.side-menu h2 {
+    margin-top: 0;
+}
+
+.side-menu.open {
+    right: 0;
+}
+
+/* menu open */
+.side-menu .header_menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-menu .close-menu{
+    font-size: var(--font-size-big-icon);
+    background-color: #ffffff00;
+    border: none;
+}
+
+/* ========== PANIER ========== */
+
+.cart-item{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0;
+    padding: 1rem 0 0 0;
+    border: 1px solid var(--font-color-border);
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+    
+}
+
+.img_product_cart{
+    width: 30%;
+    margin-right: 1rem;
+}
+
+.cart-items .h3_cart{
+    font-size: var(--font-size-text);
+}
+
+.cart_product{
+    display: flex;
+    padding: 1rem 0;
+}
+
+.remove-btn{
+    border: none;
+    background-color: var(--font-color-transparent);
+    color: var(--font-color-red);
+}
+
+#cart-total{
+    padding-top: 1rem;
+    border-top: 1px solid var(--font-color-border);
+}
+
+
+/* ==== Cart count ==== */
+.cart-count {
+    background-color: var(--font-color-red);
+    color: var(--font-color-white);
+    border-radius: 50%;
+    padding: 5px 10px;
+    transform: translate(50%, -50%);
+    font-size: var(--font-size-text);
+    display: none; 
+}
+
 
 /* ========== Main ========== */
 
@@ -147,13 +245,19 @@ button.addToCart{
     border: 1px solid var(--font-color-border);
     border-radius: 5px;
     box-shadow: 5px 5px 5px var(--font-color-shadow);
+    cursor: pointer;
+    margin-top: 2rem;
+
 }
 
 button.addToCart:hover{
     background-color: var(--font-color-grey);
 }
 
-
+.quantity-input{
+    width: 2rem;
+    margin-right: 1rem;
+}
 /* ==== RESPONSIVE ==== */
 
 @media (min-width: 720px) {

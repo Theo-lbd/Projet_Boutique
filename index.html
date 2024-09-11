@@ -17,7 +17,19 @@
             </div>
             <div>
                 <div class="cart-toggle" id="cart-toggle">
-                    <i class="fa-solid fa-cart-shopping"></i> 
+                    <i id="cart-icon" class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count" class="cart-count">0</span>
+                </div>
+                <div class="side-menu" id="side-menu">
+                    <div class="header_menu">
+                        <h2>Votre panier</h2>
+                        <button class="close-menu" id="close-menu">&times;</button> 
+                    </div>
+                    <div class="cart-items" id="cart-items"></div>    
+                    <div id="cart-total">
+                        <h3>Total: <span id="total-price">0</span>€</h3>
+                        <button id="clear-cart" class="addToCart clear-cart-btn">Supprimer le panier</button>
+                    </div>                
                 </div>
             </div>
         </section>
