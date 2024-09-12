@@ -41,7 +41,7 @@ let cart = [];
 
 // Fonction pour afficher les produits d'une catégorie
 function displayProducts(category) {
-    productsContainer.innerHTML = ''; // Réinitialisation du conteneur
+    productsContainer.innerHTML = '';
 
     if (!products[category]) {
         productsContainer.innerHTML = '<p>Aucun produit trouvé pour cette catégorie.</p>';
